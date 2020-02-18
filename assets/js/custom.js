@@ -105,3 +105,7 @@ $('.owl-testimonial').owlCarousel({
         }
     }
 })
+
+/*wow animation js*/
+
+new WOW().init();
