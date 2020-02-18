@@ -626,6 +626,86 @@ Services Area CSS Start
     bottom: 0;
 }
 
+.single-project:after,
+.single-project:before {
+    content: ""
+}
+
+.single-project {
+    overflow: hidden
+}
+
+
+.single-project {
+    position: relative
+}
+
+.single-project:after,
+.single-project:before {
+    width: 100%;
+    height: 100%;
+    background: rgba(94, 93, 255, .9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .5s ease 0s
+}
+
+.single-project:after {
+    background: rgba(255, 255, 255, .3);
+    border: 2px solid #5e5dff;
+    top: 0;
+    left: 170%;
+    opacity: 1;
+    z-index: 1;
+    transform: skewX(45deg);
+    transition: all 1s ease 0s
+}
+.single-project:hover:before {
+    opacity: 1
+}
+
+.single-project:hover:after {
+    left: -170%
+}
+
+.single-project img {
+    width: 100%;
+    height: 320px;
+}
+
+.single-project .box-content {
+    width: 100%;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    transition: all .5s ease 0s
+}
+
+.single-project:hover .box-content {
+    bottom: 3%;
+    left: 80%;
+}
+
+
+.single-project .icon {
+    margin: 0;
+    padding-left: 0
+}
+
+.single-project .icon li {
+    display: inline-block
+}
+
+.single-project .icon li a {
+    color: #fff;
+    transition: all .5s ease 0s;
+}
+.single-project .icon li,
+.single-project .title {
+    display: inline-block
+}
 
 /* Project Area style end  */
 
@@ -646,15 +726,6 @@ Services Area CSS Start
     transition: 0.5s;
 }
 
-.fact-left-box h3 {
-    font-size: 35px;
-    font-weight: 600;
-}
-
-.fact-left-box h5 {
-    font-size: 24px;
-    font-weight: 600;
-}
 
 
 /* Fun Facts Area Style end */
@@ -667,6 +738,136 @@ Services Area CSS Start
     right: -21%;
     bottom: 0;
     display: block !important;
+}
+.single-team:after,
+.single-team:before {
+    content: ""
+}
+
+.single-team {
+    overflow: hidden
+}
+
+.single-team .title {
+    letter-spacing: 1px
+}
+
+.single-team .post {
+    font-style: italic
+}
+
+.single-team {
+    position: relative
+}
+
+.single-team:after,
+.single-team:before {
+    width: 100%;
+    height: 100%;
+    background: rgba(94, 93, 255, .9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .5s ease 0s
+}
+
+.single-team:after {
+    background: rgba(255, 255, 255, .3);
+    border: 2px solid #5e5dff;
+    top: 0;
+    left: 170%;
+    opacity: 1;
+    z-index: 1;
+    transform: skewX(45deg);
+    transition: all 1s ease 0s
+}
+.single-team:hover{
+    border-radius: 25px 0 25px 0;
+}
+.single-team:hover:before {
+    opacity: 1
+}
+
+.single-team:hover:after {
+    left: -170%
+}
+
+.single-team img {
+    width: 100%;
+    height: auto
+}
+
+.single-team .box-content {
+    width: 100%;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    transition: all .5s ease 0s
+}
+
+.single-team:hover .box-content {
+    bottom: 30%;
+    text-align: center;
+}
+
+.single-team .title {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 10px
+}
+
+.single-team .post {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px
+}
+
+.single-team .icon {
+    margin: 0;
+    padding-left: 0
+}
+
+.single-team .icon li {
+    display: inline-block
+}
+
+.single-team .icon li a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    background: #0dab76;
+    font-size: 18px;
+    color: #fff;
+    margin-right: 10px;
+    transition: all .5s ease 0s
+}
+
+.single-team .icon li,
+.single-team .title {
+    display: inline-block
+}
+
+.single-team .icon li a:hover {
+    transform: rotate(360deg)
+}
+.instagram{
+    background-color: #6d28b3 !important;
+}
+.twitter{
+    background-color: #55acee !important;
+}
+.behance{
+    background-color: #4176fa !important;
+}
+.dribbble{
+    background-color: #f26798 !important;
 }
 /* Team Area style end */
 
@@ -864,22 +1065,20 @@ footer{
     border-radius: 50%;
     border: 2px solid #34344b;
     text-align: center;
-    font-size: 3px;
-    padding: 7px;
     margin-left: 16px;
 }
 .social a {
-    padding-top: 20px;
     color: #34344b !important;
 }
 .social:hover{
     border: 2px solid #6463ff;
+    color: #6463ff !important;
+    border-radius: 50%;
 }
 .social a:hover {
-    padding-top: 20px;
     color: #6463ff !important;
     text-decoration: none;
-}
+} 
 .social i:before{
     font-size: 28px;
 }
