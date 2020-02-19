@@ -603,7 +603,63 @@ Services Area CSS Start
     color: #000;
 }
 
+#service{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
+#service::before{
+    content: "";
+    background: url("../img/bg-1.png") no-repeat;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+}
+
+#service::after {
+    content: "";
+    background: url("../img/bg-2.png") no-repeat;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 40%;
+
+}
+
+/*Digital Solutions Area style start*/
+#solutions{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#solutions::before {
+    content: "";
+    background: url("../img/bg-3.png") no-repeat;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 20%;
+    bottom: 0;
+    background-position: bottom;
+}
+/*Digital Solutions Area style start*/
 /*Service Box Effect End*/
 
 
@@ -702,6 +758,9 @@ Services Area CSS Start
     color: #fff;
     transition: all .5s ease 0s;
 }
+.single-project .icon li a:hover {
+    text-decoration: none;
+}
 .single-project .icon li,
 .single-project .title {
     display: inline-block
@@ -731,6 +790,26 @@ Services Area CSS Start
 /* Fun Facts Area Style end */
 
 
+/* Priceing Area style start */
+.single-price-table{
+    background:#fff;
+    padding: 30px 30px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    opacity: 0.5;
+    transition: 0.5s;
+    border-radius: 20px 0 20px 0;
+
+}
+.single-price-table:hover{
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.1);
+    position: absolute;
+    opacity: 100%;
+    bottom: 60px;
+}
+/* Priceing Area style end */
+
 /* Team Area style start */
 
 .owl-team .owl-nav {
@@ -751,11 +830,6 @@ Services Area CSS Start
 .single-team .title {
     letter-spacing: 1px
 }
-
-.single-team .post {
-    font-style: italic
-}
-
 .single-team {
     position: relative
 }
@@ -813,18 +887,17 @@ Services Area CSS Start
 
 .single-team .title {
     display: block;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     color: #fff;
-    margin: 0 0 10px
+    margin: 0 0 5px;
 }
-
 .single-team .post {
     display: block;
     font-size: 15px;
     font-weight: 600;
     color: #fff;
-    margin-bottom: 10px
+    margin-bottom: 18px;
 }
 
 .single-team .icon {
