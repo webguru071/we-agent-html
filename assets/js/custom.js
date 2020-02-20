@@ -50,6 +50,9 @@ $('.owl-project').owlCarousel({
             items:3
         },
         1000:{
+            items:2
+        },
+        1400:{
             items:4
         }
     }
