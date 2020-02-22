@@ -27,11 +27,10 @@ section {
 
 
 /* carousel nav style */
-
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel button.owl-dot {
-    padding: 0 35px !important;
+    padding: 2px 25px !important;
     line-height: 1;
     color: #FFF;
     font-size: 14px;
@@ -42,14 +41,12 @@ section {
     cursor: pointer;
     border-radius: 28px 0px 30px 28px;
 }
-
 .owl-theme .owl-nav [class*='owl-']:hover,
 .owl-theme .owl-nav [class*='owl-']:focus {
     background: linear-gradient(to right, #57588a, #5e5dff) !important;
     outline: 0;
     transition: 0.5s;
 }
-
 
 /* Custom Falt Icom resize */
 
@@ -60,8 +57,6 @@ section {
     font-size: 32px;
     margin-left: 0px;
 }
-
-
 /* site all button */
 
 .btn-info {
@@ -110,6 +105,39 @@ section {
     font-size: 16px;
 }
 
+
+/********************  Preloader Demo-5 *******************/
+.loader {
+    width: 300px;
+    height: auto;
+    margin: 0px auto;
+    position: relative;
+}
+.loader .loader-inner{width:50px;height:50px;border-radius:25px;position:absolute;transition:all .8s ease-in-out}
+.loader .box-1{background:#89fc00;top:125px;right:0;-webkit-animation:loading-1 2.2s infinite;animation:loading-1 2.2s infinite}
+.loader .box-2{background:#dc0073;top:125px;-webkit-animation:loading-2 2.2s infinite;animation:loading-2 2.2s infinite}
+.loader .box-3{background:#1be7ff;top:0;left:125px;-webkit-animation:loading-3 2.2s infinite;animation:loading-3 2.2s infinite}
+.loader .box-4{background:#ffb800;bottom:0;left:125px;-webkit-animation:loading-4 2.2s infinite;animation:loading-4 2.2s infinite}
+@keyframes loading-1{
+    0%,100%{transform:translateX(0)}
+    50%{transform:translateX(-250px)}
+}
+@keyframes loading-2{
+    0%,100%{transform:translateX(0)}
+    50%{transform:translateX(250px)}
+}
+@keyframes loading-3{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(250px)}
+}
+@keyframes loading-4{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-250px)}
+}
+/* 
+.loader-wrp{
+
+}
 .loader {
     width: 60px;
     height: 50px;
@@ -117,8 +145,7 @@ section {
 }
 
 .loader {
-    width: 100px;
-    height: 70px;
+    width: 100%;
     margin: 50px auto;
     position: relative;
 }
@@ -218,8 +245,7 @@ section {
         background: #e50926;
     }
 }
-
-
+ */
 /* search start  */
 
 .searching {
@@ -396,7 +422,7 @@ section {
 
 .banner-left h2 {
     font-size: 60px;
-    padding-bottom: 50px;
+    padding-bottom: 45px;
 }
 
 .banner-left h4 {
@@ -447,10 +473,71 @@ section {
     max-width: 80%;
 }
 
-.discover .modal-content {
-    background: transparent;
-    border: transparent;
+
+.player {
+    position: fixed;
+    z-index: 1;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
+
+.player__video {
+    position: relative;
+    top: 50%;
+    left: 50%;
+     height: 70%;
+    width: auto;
+    max-width: 75%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.95);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.95);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+   
+}
+
+.js--show-video {
+    opacity: 1;
+}
+
+.video-filler {
+    display: block;
+    width: 100%;
+}
+
+.video-close {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: -30px;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    border-radius: 0 50% 50% 0;
+    cursor: pointer;
+    font-size: 24px;
+    color: #000;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+}
+
+.video-iframe {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #fff;
+}
+
+
 
 
 /* Banner area style end */
@@ -683,8 +770,13 @@ Services Area CSS Start
 
 .single-project {
     overflow: hidden
-}
 
+}
+.single-project {
+
+    border-radius: 30px 0 30px 0;
+
+}
 
 .single-project {
     position: relative
@@ -718,11 +810,6 @@ Services Area CSS Start
 
 .single-project:hover:after {
     left: -170%
-}
-
-.single-project img {
-    width: 100%;
-    height: 320px;
 }
 
 .single-project .box-content {
@@ -866,8 +953,8 @@ Services Area CSS Start
     transform: skewX(45deg);
     transition: all 1s ease 0s
 }
-.single-team:hover{
-    border-radius: 25px 0 25px 0;
+.single-team{
+    border-radius: 30px 0 30px 0;
 }
 .single-team:hover:before {
     opacity: 1
@@ -875,11 +962,6 @@ Services Area CSS Start
 
 .single-team:hover:after {
     left: -170%
-}
-
-.single-team img {
-    width: 100%;
-    height: auto
 }
 
 .single-team .box-content {
@@ -1001,6 +1083,8 @@ color: #34344b;
 .home-newsletter .single {
     max-width: 650px;
     margin: 0 auto;
+        margin-top: 0px;
+        margin-right: auto;
     margin-top: 0px;
     text-align: center;
     position: relative;
@@ -1009,6 +1093,7 @@ color: #34344b;
     rgba(0, 0, 0, .15) !important;
     margin-top: 67px;
     border-radius: 50px;
+    margin-right: 40px;
 }
 .home-newsletter .single .form-control {
     height: 70px;
@@ -1149,7 +1234,7 @@ footer{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
 }
 .footer-left{
-    padding-top: 18px;
+    padding-top: 10px;
 }
 .social {
     width: 45px;
@@ -1189,3 +1274,35 @@ footer{
     text-decoration: none;
 }
 /* Footer Area style end */
+
+
+/* Back to top button style start */
+
+#back2Top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: #DDD;
+    color:#8e8cfe;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+#back2Top:hover {
+    background-color: #DDF;
+    color: #5e5dff;
+}
+
+/* Back to top button style end */
+
