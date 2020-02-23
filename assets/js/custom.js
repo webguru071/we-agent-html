@@ -1,24 +1,18 @@
 
-
 /*
 =========================
 Preloader  
 =========================
 */
-/*$(window).on('load', function () {
-        $('#status').fadeOut();
-        $('#preloader').delay(350).fadeOut('slow');
-    });*/
+$(window).on('load', function () {
+    $('#preloader').fadeOut();
+    $('#loader').delay(3000).fadeOut('slow');
+});
 
-
-$(window).on('load', function(){
-    $('.pre').fadeOut();
-    $('.pre').delay(500).fadeOut('slow');
-})
 
 /*
 =========================
-scrolling navbar 
+scrolling navbar (Home page 1)
 =========================
 */
 
@@ -29,6 +23,22 @@ $(window).scroll(function() {
         $(".scrolling-navbar").removeClass("fixed-me");
     }
 });
+
+/*
+=========================
+scrolling navbar (Home Page 2)
+=========================
+*/
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 5) {
+        $(".scrolling-navbar-2").addClass("fixed-me-2");
+    } else {
+        $(".scrolling-navbar-2").removeClass("fixed-me-2");
+    }
+});
+
+/*
 
 /*
 ================================
@@ -116,7 +126,7 @@ $('.owl-project').owlCarousel({
             items:3
         },
         1000:{
-            items:2
+            items:3
         },
         1400:{
             items:4
